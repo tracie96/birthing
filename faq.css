@@ -1,0 +1,119 @@
+.applySection .homeText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row .col {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.row .col:last-child {
+  margin-left: 1em;
+}
+
+/* Accordion styles */
+.tabs {
+  overflow: hidden;
+}
+
+.tabs input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tabs input:checked + .tab-label {
+  background: #e6e6e6;
+}
+
+.tabs input:checked + .tab-label::after {
+  /* -webkit-transform: rotate(90deg); */
+  /* transform: rotate(90deg); */
+  content: "-";
+}
+
+.tabs input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.tab {
+  width: 100%;
+  color: black;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
+.tab-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 19px;
+  line-height: 20px;
+  /* Icon */
+}
+
+.tab-label:hover {
+  background: #e6e6e6;
+}
+
+.tab-label::after {
+  content: "+";
+  width: 1em;
+  height: 1em;
+  color: #50ae7c;
+  font-size: 20px;
+  text-align: center;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: black;
+  background: white;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.tab-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.tab-close:hover {
+  background: #e6e6e6;
+}
+/*# sourceMappingURL=faq.css.map */
